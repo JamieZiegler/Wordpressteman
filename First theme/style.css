@@ -1,0 +1,487 @@
+/*
+Theme Name: Mitt första tema
+Author: James Ziegler
+Description: Mitt tema helt enkelt
+Version: 1.0
+License: GNU General Public License v2 or later
+Tags: Taggar här 
+Text Domain: mitt-forsta-tema
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*-------------------------------------------------------------*/
+/* Stilar för containers */
+
+body {
+    background-image: url(images/bakgrund2.png);
+    display: flex;
+    font-family: 'Quantico', sans-serif;
+    font-size: 16px;
+    justify-content: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 3px #000000;
+}
+
+
+#wrapper {   
+    background-color: #ffeaf893;
+    border: 1px solid #eec3ff73;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 1300px;
+}
+
+
+#content {
+    flex: 2;
+    justify-content: center;
+}
+
+
+header {
+    order: 1;
+    margin-bottom: 10px;
+}
+
+
+header, footer {
+    text-align: center;
+}
+
+
+.main {
+    order: 3;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffe4fbf5;
+    border-radius: 20px;
+    justify-content: center;
+    box-shadow: 0 0 10px #561b86c5;
+    padding: 20px;
+}
+
+
+article header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+
+article section {
+    padding: 20px;
+}
+
+
+section {
+    margin-right: 20px;
+}
+
+
+section section {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+
+aside section, section {
+    padding: 40px;
+    margin-top: 20px;
+}
+
+section, aside, aside section, article header {
+    background-color: #9b80e485;
+    border-radius: 40px;
+    box-shadow: 4px 5px 6px #561b8691,
+    inset 0 0 10px #561b8691;
+    border: 1px solid white;
+}
+
+
+aside {
+    flex: 1;
+    border-radius: 30px 10px 30px;
+}
+
+
+aside section {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+/*-------------------------------------------------------------*/
+/* Stilar för text-element */
+
+p {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+aside p {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+
+h1 {
+    font-size: 2rem;
+}
+
+
+h2 {
+    font-size: 1.75rem;
+    text-align: center;
+    padding: 10px;
+}
+
+
+h3 {
+    font-size: 1.5rem;
+}
+
+
+h4 {
+    font-size: 1.25rem;
+}
+
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+footer p {
+    font-size: 0.9rem;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+section a:hover, aside a:hover {
+    text-decoration: underline;
+}
+
+
+section a:visited, aside a:visited {
+    color: #00e1ff;
+}
+
+
+/*-------------------------------------------------------------*/
+/* Bild- och iframe-stilar */
+
+
+
+img, iframe {
+    border-radius: 8px;
+}
+
+
+
+iframe {
+    margin-bottom: 10px;
+    border: 1px;
+    width: 100%; 
+    min-height: 352px;
+    text-align: center;
+}
+
+
+
+aside iframe {
+    height: 352px;
+    margin-top: 10px;
+}
+
+
+aside img {
+    margin-top: 10px;
+}
+
+
+
+header img, footer img {
+
+    margin: 10px;
+}
+
+
+/* Jag hade problem med att bilder som laddats upp via wordpress inte ville justeras enbart av att använda knapparna
+för detta i den visuella redigeraren. Jag sökte mycket efter en lösning på detta i forum, och försökte ta reda på om 
+och i så fall vad jag hade gjort fel. Det visade sig dock vara ett ganska vanligt problem, och i ett forum fick jag 
+rådet att helt enkelt skapa egna regler för justering via CSS, och det fungerade utomordentligt! */
+/* Styling bilder som ska centreras */
+
+
+img.centered, .aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+img.alignright {
+    padding: 4px;
+    margin: 0 0 2px 7px;
+    display: inline;
+}
+
+
+img.alignleft {
+    padding: 4px;
+    margin: 0 7px 2px 0;
+    display: inline;
+}
+
+
+.alignright {
+    float: right;
+}
+
+
+.alignleft {
+    float: left;
+}
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+
+input[type=submit] {
+    background-color: #9310ff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+input[type=submit]:hover {
+    background-color: #29293d;
+}
+
+
+textarea {
+    height: 200px;
+}
+
+
+/*-------------------------------------------------------------*/
+/* Navigationsstilar*/
+
+
+nav {
+    position: sticky;
+    top: 0;
+    margin-bottom: 20px;
+    z-index: 100;
+    width: 100%;
+}
+
+
+nav.sticky {
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 25px;
+    background-color: #9b80e485;
+    border-radius: 100px;
+    border: 2px solid white;
+    text-align: center;
+    box-shadow: 2px 3px 4px #561b8691,
+    inset 0 0 20px #3c0f61dc;
+}
+
+
+nav li {
+    display: inline-block;
+    position: relative;
+}
+
+
+nav a {
+    text-align: center;
+    padding: 14px 16px;
+    border-radius: 30px 10px 30px;
+    box-shadow: 3px 4px 5px #471570ea,
+    inset 0 0 20px #3c0f61dc;
+    margin: 5px;
+    background-color: #ca8bee;
+    width: max-content;
+    border: 1px solid #3c105f83;
+}
+
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    border-radius: 10px;
+    background-color: #6b2c8f00;
+    box-shadow: none;
+    text-align: left;
+    border: none;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul a {
+    display: block;
+    text-align: left;
+}
+
+nav a:hover {
+    background-color: #29293d;
+}
+
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    z-index: 99;
+    font-size: 2rem;
+    font-family: 'Quantico', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 3px #000000;
+    outline: none;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px 30px 10px;
+    border: 2px solid white;
+    box-shadow: 3px 4px 5px #471570ea,
+    inset 0 0 20px #3c0f61dc;
+    background-color: #ca8bee;
+}
+
+#myBtn:hover {
+    background-color: #29293d;
+}
+
+
+/*-------------------------------------------------------------*/
+/* Stilar för mindre skärmar */
+
+
+@media screen and (max-width: 600px) {
+    #wrapper {
+        height: 100vh;
+        width: 100vw;
+    }
+
+
+    body, .main, #content {
+        font-size: 1rem;
+        justify-content: center;
+        padding-left: 20px;
+        word-wrap: break-word;
+    }
+
+
+    h1, h2, h3 {
+        font-size: 1.2rem;
+    }
+
+
+    p {
+        font-size: 0.8rem;
+    }
+
+
+    article section, article header {
+        width: 90vw;
+        margin-bottom: 5px;
+        padding: 10px;
+    }
+
+
+    section section {
+        width: auto;
+        justify-content: center;
+        margin: 10px;
+    }
+
+
+    #myBtn {
+        font-size: 1rem;
+    }
+
+
+    aside {
+        width: 90vw;
+        margin: 5px;
+        justify-content: center;
+    }
+
+
+    aside section {
+        margin: 10px;
+    }
+
+
+    nav a {
+        width: 100%;
+    }
+
+
+    nav li {
+        margin: 20px 10px;
+    }
+
+
+    img.centered, .aligncenter, img.alignright, img.alignleft, .alignright, .alignleft, .alignnone, img.alignnone, img {
+        max-width: 200px;
+        height: auto;
+    }
+
+
+    iframe {
+        width: 60vw;
+    }
+}
+
+

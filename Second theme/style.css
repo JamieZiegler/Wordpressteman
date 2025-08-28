@@ -1,0 +1,638 @@
+/*
+Theme Name: Mitt andra tema
+Author: James Ziegler
+Description: Mitt tema helt enkelt
+Version: 1.0
+License: GNU General Public License v2 or later
+Tags: Taggar här 
+Text Domain: mitt-andra-tema
+*/
+
+/* Importera typsnitt från Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&family=Space+Grotesk:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    column-gap: 20px;
+    word-wrap: break-word;
+}
+
+/*-------------------------------------------------------------*/
+
+/* Stilar för body */
+body {
+    background-color: #90979E;
+    display: flex;
+    font-family: 'Prompt', sans-serif;
+    font-size: 14px;
+    justify-content: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+/* Stilar för wrappern */
+#wrapper {   
+    transition: background-color 0.5s ease;
+    background-color: #c3c8ce;
+    border: 1px solid #ffffff;
+    flex-wrap: nowrap;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+/* Stilar för huvudinnehåll */
+#content {
+    flex: 2;
+    justify-content: center;
+    flex-direction: row;
+    min-width: 500px;
+}
+
+/* Stilar för header */
+header {
+    order: 1;
+    background-color: #072D50;
+    border-top: 3px solid #7B7402;
+    border-left: 3px solid #7B7402;
+    border-right: 3px solid #7B7402;
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+/* Stilar för den första och största versionen av header-logotypen.
+Display: block ser till att den visas. */
+#headerImage1 {
+    display: block;
+    width: auto;
+    height: 200px;
+}
+
+#headerImage2, #headerImage3 {
+    display: none;
+}
+
+header, footer, article header, footer p, h2, nav ul, nav a {
+    text-align: center;
+}
+
+/* Stilar för main */
+.main {
+    order: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+article header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    width: auto;
+}
+
+article header, article section, aside section {
+    /* Bakgrundsfärg om script 5 inte skulle fungera eller om användaren har stängt av javascript i webbläsaren */
+    background-color: #405970;
+}
+
+article, #print, aside section, hr, h2, iframe, img.centered, .aligncenter, img.alignright, .alignright, img.alignleft, .alignleft {
+    margin-bottom: 10px;
+}
+
+article section {
+    padding: 20px;
+    margin-top: 10px;
+}
+
+aside {
+    flex: 1;
+    word-break: break-all;
+}
+
+aside section {
+    padding: 15px;
+}
+
+section, aside section, article header {
+    border-radius: 5px;
+    transition: background-color 0.5s ease;
+}
+
+/*-------------------------------------------------------------*/
+/* Stilar för text-element */
+
+p {
+    margin: 20px;
+    text-align: left;
+}
+
+p, aside ul {
+    line-height: 2;
+    font-size: 1rem;
+}
+
+aside ul, nav ul {
+    list-style-type: none;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    padding: 20px;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+section h3 {
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+hr {
+    background-color: #ffffff;
+    height: 1px;
+}
+
+a {
+    color: white;
+}
+
+nav a, #print a {
+    text-decoration: none;
+}
+
+section a:hover, aside a:hover {
+    color: rgb(255, 167, 249);
+}
+
+section a:visited, aside a:visited {
+    color: #93dae4;
+}
+
+article section ul {
+    margin-left: 20px;
+}
+
+/*-------------------------------------------------------------*/
+
+/* Bild- och iframe-stilar */
+
+img, iframe {
+    border-radius: 8px;
+}
+
+section img, iframe {
+    padding: 4px;
+    border: 2px solid white;
+    max-width: 100%;
+    height: auto;
+}
+
+iframe.presentation {
+    border: none;
+}
+
+section iframe {
+    width: 550px;
+    height: 300px;
+}
+
+aside iframe {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+}
+
+#headerImage1, footer img {
+    margin-top: 20px;
+    filter: drop-shadow(5px 5px 8px #000000);
+}
+
+#print img {
+    padding: 0;
+    border: none;
+}
+
+img.centered, .aligncenter {
+    display: inline;
+    margin: auto;
+    align-items: baseline;
+}
+
+img.no-border, img.kontakt {
+    border: none;
+}
+
+img.home {
+    margin-top: 10px;
+}
+
+/* Float till höger vid högerjustering, samt justering av marginaler, display inline för att undvika att bilden "sticker utanför" vid skalning */
+img.alignright, .alignright {
+    margin-left: 20px;
+    margin-right: 0;
+    float: right;
+    display: inline;
+}
+
+/* Float till vänster vid vänsterjustering, samt justering av marginaler */
+img.alignleft, .alignleft {
+    margin-right: 20px;
+    margin-left: 0;
+    float: left;
+    display: inline;
+}
+
+/*-------------------------------------------------------------*/
+
+/* Formulärstilar */
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #76020F;
+    box-shadow: 0 0 5px #000000;
+    border: 1px solid #350107;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #350107;
+}
+
+textarea {
+    height: 200px;
+}
+
+/*-------------------------------------------------------------*//*-------------------------------------------------------------*/
+/* Navigationsstilar*/
+
+nav {
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    background-color: #072D50;
+    border-radius: 0 0 5px 5px;
+    border-right: 3px solid #7B7402;
+    border-bottom: 3px solid #7B7402;
+    border-left: 3px solid #7B7402;
+}
+
+nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #072D50;
+    width: 100%;
+}
+
+nav ul {
+    /* Ställer in padding */
+    padding: 25px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+nav li {
+    display: inline-block;
+    position: relative;
+}
+
+nav a {
+    padding: 14px 16px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000000;
+    margin-left: 6px;
+    margin-top: 5px;
+    background-color: #76020F;
+    width: auto;
+    border: 1px solid #350107;
+}
+
+nav ul ul {
+
+    display: none;
+    position: absolute;
+    top: 168%;
+    left: 0;
+    min-width: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #072D50;
+    box-shadow: none;
+    text-align: left;
+    border: none;
+    z-index: 110;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul a {
+    display: block;
+    text-align: left;
+    min-width: max-content;
+}
+
+nav a:hover {
+    background-color: #350107;
+}
+
+.menyikon {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.menyikon div {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    z-index: 99;
+    font-size: 2rem;
+    font-family: 'Prompt', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 3px #000000;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    border: 1px solid #350107;
+    box-shadow: 0 0 5px #000000;
+    background-color: #76020F;
+}
+
+#myBtn:hover {
+    background-color: #350107;
+}
+
+/*-------------------------------------------------------------*/
+/* Stilar för mindre skärmar */
+
+@media only screen and (min-width: 981px) {
+    #wrapper {
+        width: 70vw;
+        min-width: 980px;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    * {
+        column-gap: 10px;
+        box-sizing: border-box;
+    }
+
+    #wrapper {
+        width: 100vw;
+        max-width: 980px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    * {
+        column-gap: 5px;
+    }
+
+    #headerImage1, #headerImage3 {
+        display: none;
+    }
+
+    #headerImage2 {
+        display: block;
+        width: auto;
+        height: 100px;
+        padding-bottom: 30px;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+        border-radius: 5px;
+        border: 3px solid #7B7402;
+    }
+
+    .main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #wrapper {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 768px;
+    }
+
+    body, .main, #content {
+        font-size: 1rem;
+        justify-content: center;
+        word-wrap: break-word;
+    }
+
+    aside, #content {
+        min-width: 100%;
+    }
+
+    article {
+        margin-bottom: 10px;
+    }
+
+    nav {
+        border: none;
+    }
+
+    nav ul {
+        display: none;
+        top: 13%;
+        left: 20%;
+        width: 100%;
+        background-color: #072D50;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+    }
+
+    .menyikon {
+        display: block;
+        position: fixed;
+    }
+
+    nav.sticky {
+        padding-top: 60px;
+    }
+
+    nav ul ul {
+        top: 100%;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul ul a {
+        text-align: center;
+        background-color: #A65962;
+    }
+
+    nav a:hover {
+        background-color: #350107;
+    }
+
+    img.presentation {
+        height: 50%;
+        width: auto;
+        float: left;
+    }
+
+    img.kontakt {
+        width: auto;
+        height: auto;
+    }
+
+    img.home, img.article {
+        max-width: 100%;
+        height: auto;
+        align-items: center;
+    }
+
+    iframe {
+        max-width: 70vw;
+    }
+    
+    #myBtn, h1, h2, h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #headerImage1, #headerImage2 {
+        display: none;
+    }
+
+    #headerImage3 {
+        display: block;
+        height: 30px;
+        width: auto;
+    }
+
+    #content, aside {
+        max-width: 100%;
+    }
+
+    img.kontakt {
+        max-width: 60px;
+    }
+
+    img.home, img.article, img.presentation, img.no-border {
+        max-width: 100%;
+        height: auto;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        background-color: #072D50;
+        border-radius: 5px;
+        height: 50px;
+    }
+
+    article header {
+        background-image: none;
+    }
+
+    section {
+        padding: 10px;
+        
+    }
+
+    p {
+        margin-bottom: 10px;
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    aside ul {
+        line-height: 1.5;
+        font-size: 0.8rem;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    section h3 {
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    h4 {
+        font-size: 0.9rem;
+    }
+}

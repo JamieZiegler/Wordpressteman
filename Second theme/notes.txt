@@ -1,0 +1,52 @@
+Färger:
+        Lila mörk till ljus
+
+        #2E0753
+        #452564
+        #5C4375
+        #79688A
+        #9E96A5
+
+        Röd mörk till ljus
+
+        #76020F
+        #8E2E39
+        #A65962
+        #C48F96
+        #EBD3D6
+
+        BLÅ MÖRK T LJUS
+
+        #072D50
+        #244360
+        #405970
+        #637585
+        #90979E
+
+        GRÖN MÖRK T LJUS
+
+        #7B7402
+        #948F30
+        #ADA95D
+        #CDCA96
+        #F5F3DC
+
+        GULD
+        #956d13
+
+        Enl. statistik
+
+        Vanligaste storlekarna för Desktop och laptop:
+        1920x1080
+        1366x768
+
+        Tablet:
+        768x1024
+
+        Mobil:
+        480x800
+        
+
+        https://gs.statcounter.com/screen-resolution-stats/mobile/worldwide
+
+
